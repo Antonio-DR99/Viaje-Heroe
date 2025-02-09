@@ -6,7 +6,7 @@
     position: relative; 
     width: 100%;
     height: 100vh;
-    background: url('img/back1.jpg');
+    background: url('resources/back1.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@
     position: relative; 
     width: 100vw;       
     height: 100vh;
-    background: url('img/back6.webp');
+    background: url('resources/back6.webp');
     display: none;
     background-size: cover; 
     background-position: center; 

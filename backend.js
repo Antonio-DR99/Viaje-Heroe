@@ -34,13 +34,13 @@ function abajo() {
 function izquierda() {
     posX -= 10; 
     actualizarPosicion();
-    document.getElementById('martina').src = 'img/martina1.png'
+    document.getElementById('martina').src = 'resources/martina1.png'
 }
 
 function derecha() {
     posX += 10; 
     actualizarPosicion();
-    document.getElementById('martina').src = 'img/martina.png'
+    document.getElementById('martina').src = 'resources/martina.png'
 }
 
 function actualizarPosicion() {

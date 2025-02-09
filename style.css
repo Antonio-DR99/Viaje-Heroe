@@ -37,29 +37,15 @@
     position: relative; 
     width: 100vw;       
     height: 100vh;
-    background: url('resources/back6.webp');
+    background: url('resources/BackGraund.png');
     display: none;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
 }
-.martinaDiv{
-    position: absolute;
-    width: 80px;
-    height: 90px;
-    z-index: 1;
 
-} 
-.martina{
-    width: 100%;
-}                               
-.backgBotones {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 150px; 
-    height: 150px;
-}
+
+
 
                                     
 button {
@@ -78,104 +64,7 @@ button:hover {
 
 }
 
-
-.botonUp {
-    top: 7px; 
-    left: 55px; 
-}
-
-.botonDown {
-    bottom: 10px; 
-    left: 55px; 
-}
-
-.botonLeft {
-    top: 55px; 
-    left: 10px; 
-}
-
-.botonRight {
-    top: 55px; 
-    right: 10px; 
-}    
-.botonFraseMartina {
-    bottom: 10px; 
-    left: 180px;
-    position: absolute;
-    width: 125px; 
-    height: 50px;
-    background-color: white;
-    color: rgb(58, 58, 58);
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 15px; 
-}
-.mama {
-    position: absolute;
-    width: 45px;
-    height: 100px;
-    left: 60%;
-    top: 40%;
-}
-
-.papa {
-    position: absolute;
-    width: 62px;
-    height: 105px;
-    left: 49%;
-    top: 25%;
-}
-
-.abuCleo {
-    position: absolute;
-    width: 42px;
-    height: 100px;
-    left: 43%;
-    top: 70%;
-}
-
-.abuManoli {
-    position: absolute;
-    width: 45px;
-    height: 110px;
-    left: 30%;
-    top: 38%;
-}
-
-.abuManolo {
-    position: absolute;
-    width: 42px;
-    height: 100px;
-    left: 79%;
-    top: 34%;
-}
-
-.abuPepi {
-    position: absolute;
-    width: 40px;
-    height: 102px;
-    left: 39%;
-    top: 38%;
-}
-
-.tarzan {
-    position: absolute;
-    width: 50px;
-    height: 65px;
-    left: 75%;
-    top: 43%;
-}
-
-.dialogoMartina {
-    position: absolute;
-    width: 200px;
-    top: -80px;
-    left:-70px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: none;
-    z-index: 1;
+.personajes img{
+    width: 100px;
+    height: auto;    
 }

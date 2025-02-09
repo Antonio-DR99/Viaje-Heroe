@@ -1,6 +1,9 @@
-            
-var posX;
-var posY;
+var posX = 0;
+var posY = 0;
+var distancia = 5;
+var personajeSeleccionado = "personaje-01"; 
+var anchoPantalla = window.innerWidth;
+var altoPantalla = window.innerHeight;
 
 function iniciarJuego() {
     var pantallaInicio = document.getElementById('pantallaInicio');
@@ -8,52 +11,85 @@ function iniciarJuego() {
     pantallaInicio.style.display = 'none';
     pantallaJuego.style.display = 'block';
 
-    var martina = document.getElementById('martinaDiv');
-    var anchoMaximo = pantallaJuego.clientWidth - martina.offsetWidth;
-    var altoMaximo = pantallaJuego.clientHeight - martina.offsetHeight;
-
+    personaje = document.getElementById(personajeSeleccionado);
+    var anchoMaximo = pantallaJuego.clientWidth - personaje.offsetWidth;
+    var altoMaximo = pantallaJuego.clientHeight - personaje.offsetHeight;
 
     posX = Math.random() * anchoMaximo;
     posY = Math.random() * altoMaximo;
 
-    martina.style.left = posX + 'px';
-    martina.style.top = posY + 'px';
+    personaje.style.left = posX + 'px';
+    personaje.style.top = posY + 'px';
+
+    escucharTeclado();
 }
 
 
-function arriba() {
-    posY -= 10; 
-    actualizarPosicion();
-}
+// Elegir un personaje al clicarco
 
-function abajo() {
-    posY += 10; 
-    actualizarPosicion();
-}
-
-function izquierda() {
-    posX -= 10; 
-    actualizarPosicion();
-    document.getElementById('martina').src = 'resources/martina1.png'
+function seleccionarPersonaje(id) {
+    personajeSeleccionado = id;
 }
 
 function derecha() {
-    posX += 10; 
-    actualizarPosicion();
-    document.getElementById('martina').src = 'resources/martina.png'
+    var personaje = document.getElementById(personajeSeleccionado);
+    if (posX + distancia <= anchoPantalla - personaje.offsetWidth) {
+        posX += distancia;
+        personaje.style.left = posX + "px";
+    }
 }
 
-function actualizarPosicion() {
-    var martina = document.getElementById('martinaDiv');
-    martina.style.left = posX + "px";
-    martina.style.top = posY + "px";
-
-    dialogoMartina.style.display = 'none';
+function izquierda() {
+    var personaje = document.getElementById(personajeSeleccionado);
+    if (posX - distancia >= 0) {
+        posX -= distancia;
+        personaje.style.left = posX + "px";
+    }
 }
+
+function arriba() {
+    var personaje = document.getElementById(personajeSeleccionado);
+    if (posY - distancia >= 0) {
+        posY -= distancia;
+        personaje.style.top = posY + "px";
+    }
+}
+
+function abajo() {
+    var personaje = document.getElementById(personajeSeleccionado);
+    if (posY + distancia <= altoPantalla - personaje.offsetHeight) {
+        posY += distancia;
+        personaje.style.top = posY + "px";
+    }
+}
+
+
+// funcion Teclado 
+
+
+function escucharTeclado() {
+    document.addEventListener("keydown", function (teclaPresionada) {
+        if (teclaPresionada.key === "ArrowRight") {
+            derecha();
+        } else if (teclaPresionada.key === "ArrowLeft") {
+            izquierda();
+        } else if (teclaPresionada.key === "ArrowUp") {
+            arriba();
+        } else if (teclaPresionada.key === "ArrowDown") {
+            abajo();
+        }
+    });
+}
+
+
+// Dialogos
+
 
 function hablarMartina() {
     var dialogoMartina = document.getElementById('dialogoMartina');
-    var dialogoAleatorio = Math.floor(Math.random()*5)+1;
+    if (!dialogoMartina) return;
+
+    var dialogoAleatorio = Math.floor(Math.random() * 5) + 1;
 
     switch (dialogoAleatorio) {
         case 1:
@@ -71,9 +107,7 @@ function hablarMartina() {
         case 5:
             dialogoMartina.innerHTML = '¡Soy una gran aventurera!';
             break;
-        default:
-            break;
     }
-    dialogoMartina.style.display = 'block';
 
+    dialogoMartina.style.display = 'block';
 }

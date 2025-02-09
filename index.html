@@ -3,12 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Aventura de Martina</title>
     <link rel="stylesheet" href="style.css">
-    <title>Viaje-Heroe</title>
 </head>
-<body>
-    <h1>Viaje Del Heroe!</h1>
-</body>
-<script src="backend.js"></script>
+<body>                                            
+    <div class="pantallaInicio" id="pantallaInicio">
+        <img src="img/start.png" class="botonInicio" onclick="iniciarJuego()">
+    </div>
 
+    <div class="pantallaJuego" id="pantallaJuego">
+
+        <div class="martinaDiv" id="martinaDiv">
+            <img src="img/martina.png" class="martina" id="martina" >
+            <div class="dialogoMartina" id="dialogoMartina"></div>
+        </div>
+
+        <div class="mamaDiv">
+            <img src="img/mama.png" class="mama" id="mama">
+            <img src="img/papa.png" class="papa" id="papa">
+            <div class="dialogoMama" id="dialogoMama"></div>
+        </div>
+
+        <div class="abueloCleoDiv">
+            <img src="img/abuCleo.png" class="abuCleo" id="abuCleo">
+            <img src="img/abuManoli.png" class="abuManoli" id="abuManoli">
+            <div class="dialogoAbuCleo" id="dialogoAbuCleo"></div>
+        </div>
+
+        <div class="abueloManoloDiv">
+            <img src="img/abuManolo.png" class="abuManolo" id="abuManolo">
+            <img src="img/abuPepi.png" class="abuPepi" id="abuPepi">
+            <img src="img/tarzan.png" class="tarzan">
+            <div class="dialogoAbuManolo" id="dialogoAbuManolo"></div>
+        </div>
+
+        <div class="backgBotones">
+            <button class="botonUp" onclick="arriba()">↑</button>
+            <button class="botonDown" onclick="abajo()">↓</button>
+            <button class="botonLeft" onclick="izquierda()">←</button>
+            <button class="botonRight" onclick="derecha()">→</button>
+            <button class="botonFraseMartina" onclick="hablarMartina()">Frase Martina</button>
+
+        </div> 
+    </div>
+</body>
 </html>
+<script src="backend.js"></script>

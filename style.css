@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.pantallaInicio {
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    background: url('img/back1.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    
+}
+.botonInicio {
+    position: absolute;
+    top: 40%;
+    left: 44%;
+    width: 250px;
+    height: 100px;
+    border: none;
+    cursor: pointer; 
+    animation: parpadeo 1s infinite;       
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1;                      
+    }
+    50% {
+        opacity: 0.5;                     /
+    }
+}
+
+.pantallaJuego {          
+    position: relative; 
+    width: 100vw;       
+    height: 100vh;
+    background: url('img/back6.webp');
+    display: none;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.martinaDiv{
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    z-index: 1;
+
+} 
+.martina{
+    width: 100%;
+}                               
+.backgBotones {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 150px; 
+    height: 150px;
+}
+
+                                    
+button {
+    position: absolute;
+    width: 45px; 
+    height: 45px;
+    background-color: white;
+    border: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 252, 0.3);
+
+}
+
+
+.botonUp {
+    top: 7px; 
+    left: 55px; 
+}
+
+.botonDown {
+    bottom: 10px; 
+    left: 55px; 
+}
+
+.botonLeft {
+    top: 55px; 
+    left: 10px; 
+}
+
+.botonRight {
+    top: 55px; 
+    right: 10px; 
+}    
+.botonFraseMartina {
+    bottom: 10px; 
+    left: 180px;
+    position: absolute;
+    width: 125px; 
+    height: 50px;
+    background-color: white;
+    color: rgb(58, 58, 58);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px; 
+}
+.mama {
+    position: absolute;
+    width: 45px;
+    height: 100px;
+    left: 60%;
+    top: 40%;
+}
+
+.papa {
+    position: absolute;
+    width: 62px;
+    height: 105px;
+    left: 49%;
+    top: 25%;
+}
+
+.abuCleo {
+    position: absolute;
+    width: 42px;
+    height: 100px;
+    left: 43%;
+    top: 70%;
+}
+
+.abuManoli {
+    position: absolute;
+    width: 45px;
+    height: 110px;
+    left: 30%;
+    top: 38%;
+}
+
+.abuManolo {
+    position: absolute;
+    width: 42px;
+    height: 100px;
+    left: 79%;
+    top: 34%;
+}
+
+.abuPepi {
+    position: absolute;
+    width: 40px;
+    height: 102px;
+    left: 39%;
+    top: 38%;
+}
+
+.tarzan {
+    position: absolute;
+    width: 50px;
+    height: 65px;
+    left: 75%;
+    top: 43%;
+}
+
+.dialogoMartina {
+    position: absolute;
+    width: 200px;
+    top: -80px;
+    left:-70px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+    z-index: 1;
+}

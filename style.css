@@ -1,17 +1,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 .pantallaInicio {
-    display: flex; 
-    width: 100%;
+    position: fixed; 
+    width: 100vw;
     height: 100vh;
     background: url('resources/pantallaCarga.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-
-    
 }
 .botonInicio {
     position: absolute;
@@ -29,14 +33,33 @@
         opacity: 1;                      
     }
     50% {
-        opacity: 0.5;                     /
+        opacity: 0.5;                     
     }
 }
 
-.pantallaJuego {          
-    position: relative; 
-    width: 100vw;       
+.contenedorJuego{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    width: 100vw;
     height: 100vh;
+    
+}
+
+.contenedor-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: -5%;
+    padding: 5%;
+
+}
+.pantallaJuego {     
+    border-radius: 10px;     
+    position: relative; 
+    width: 65%;       
+    height: 65%;
     background: url('resources/BackGraund.png');
     display: none;
     background-size: cover; 
@@ -68,6 +91,12 @@ button:hover {
     position:absolute;
 }
 .personajes img{
-    width: 100px;
+    width: 80px;
     height: auto;    
+    cursor: pointer;
+}
+
+.bocadillo{
+    display: none;
+    position: absolute;
 }

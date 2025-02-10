@@ -63,7 +63,10 @@ button:hover {
     background-color: rgb(255, 255, 252, 0.3);
 
 }
-
+.personajes{
+    display: none;
+    position:absolute;
+}
 .personajes img{
     width: 100px;
     height: auto;    

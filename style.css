@@ -96,7 +96,20 @@ button:hover {
     cursor: pointer;
 }
 
-.bocadillo{
+.bocadillo {
     display: none;
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 0px 40px; /* Menos espacio vertical, más horizontal */
+    font-size: 15px; /* Puedes ajustarlo si lo necesitas */
+    font-family: 'Arial', sans-serif; /* Estilo de la fuente */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Sombra sutil */
+    max-width: 700px; /* Ancho máximo del bocadillo */
+    word-wrap: break-word; /* Ajusta el texto largo */
+    height: auto; /* Deja que la altura se ajuste automáticamente al contenido */
+    top: -100px; /* Ajusta la posición del bocadillo para que esté encima del personaje */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Asegura que el bocadillo se centre */
 }

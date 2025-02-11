@@ -93,13 +93,13 @@ function hablar(personajeId){
 
     switch (personajeId) {
         case "personaje-01":
-            dialogoAleatorio=Math.floor(Math.random()*dialogo02.length);
-            fraseAleatoria=dialogo02[dialogoAleatorio];
+            dialogoAleatorio=Math.floor(Math.random()*dialogo01.length);
+            fraseAleatoria=dialogo01[dialogoAleatorio];
             break;
     
         case "personaje-02":
-            dialogoAleatorio=Math.floor(Math.random()*dialogo01.length);
-            fraseAleatoria=dialogo01[dialogoAleatorio];
+            dialogoAleatorio=Math.floor(Math.random()*dialogo02.length);
+            fraseAleatoria=dialogo02[dialogoAleatorio];
             break;
     
         case "personaje-03":
@@ -124,6 +124,5 @@ function hablar(personajeId){
 
     bocadillo.innerHTML=fraseAleatoria; 
     bocadillo.style.display = 'block';
-
 
 }

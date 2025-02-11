@@ -124,5 +124,6 @@ function hablar(personajeId){
 
     bocadillo.innerHTML=fraseAleatoria; 
     bocadillo.style.display = 'block';
+    bocadillo.classList.add("visible");
 
 }

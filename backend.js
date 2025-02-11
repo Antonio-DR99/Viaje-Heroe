@@ -82,32 +82,7 @@ function escucharTeclado() {
 }
 
 
-// Dialogos
 
 
-function hablarMartina() {
-    var dialogoMartina = document.getElementById('dialogoMartina');
-    if (!dialogoMartina) return;
 
-    var dialogoAleatorio = Math.floor(Math.random() * 5) + 1;
 
-    switch (dialogoAleatorio) {
-        case 1:
-            dialogoMartina.innerHTML = '¡Deséadme suerte en mi aventura!';
-            break;
-        case 2:
-            dialogoMartina.innerHTML = '¡Volveré pronto, será un gran viaje!';
-            break;
-        case 3:
-            dialogoMartina.innerHTML = '¡Voy protegida con mi perrita Gala!';
-            break;
-        case 4:
-            dialogoMartina.innerHTML = '¡Os quiero mucho familia!';
-            break;
-        case 5:
-            dialogoMartina.innerHTML = '¡Soy una gran aventurera!';
-            break;
-    }
-
-    dialogoMartina.style.display = 'block';
-}

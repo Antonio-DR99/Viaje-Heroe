@@ -104,7 +104,7 @@ button:hover {
     border-radius: 10px; /* Bordes redondeados */
     padding: 5px 10px; /* Espaciado interior */
     font-size: 15px; /* Tamaño de fuente */
-    font-family: 'Arial', sans-serif; /* Familia de fuente */
+    font-family: "Jersey 15", serif; /* Familia de fuente */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Sombra difusa */
     word-wrap: break-word; /* Permite que el texto se ajuste y no se desborde */
     height: auto; /* Ajuste automático de la altura */
@@ -115,9 +115,11 @@ button:hover {
     display: block; /* Lo hace visible cuando se activa */
     transition: visibility 0s, opacity 0.3s ease-in-out; /* Transición para suavizar el cambio de visibilidad */
     opacity: 0; /* Lo hace completamente invisible */
+    text-align: center;
 }
 
 .bocadillo.visible {
     visibility: visible; /* Lo hace visible cuando se activa */
     opacity: 1; /* Se vuelve opaco */
 }
+

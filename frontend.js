@@ -126,4 +126,9 @@ function hablar(personajeId){
     bocadillo.style.display = 'block';
     bocadillo.classList.add("visible");
 
+    setTimeout(function(){
+        bocadillo.style.display='none'; 
+        bocadillo.classList.remove("visible");
+    },4000);
+
 }

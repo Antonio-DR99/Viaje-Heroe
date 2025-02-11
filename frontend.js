@@ -91,7 +91,7 @@ function hablar(personajeId) {
 
     // Si ya se alcanzó el límite, el personaje deja de hablar
     if (contadorConversacion >= limiteConversacion) {
-        fraseAleatoria = "Ya no tengo más que decir...";
+        fraseAleatoria = "Ya no puedo decir más... ¡Corred, insensatos!";
     }else {
         // Selecciona una frase aleatoria si aún no se ha alcanzado el límite
         let dialogoAleatorio = Math.floor(Math.random() * dialogos.length);

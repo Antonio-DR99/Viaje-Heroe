@@ -36,6 +36,49 @@ function positionRandom(){
 }
 
 
+
+let dialogo01 = [
+    "¡Hola forastero! ¿Necesitas algo?",
+    "Nuestra aldea es pequeña, pero acogedora.",
+    "Dicen que en el bosque cercano hay algo misterioso...",
+    "Trabajo en la granja con mi familia, es duro pero gratificante.",
+    "Si buscas aventuras, quizás deberías hablar con el jefe del pueblo.",
+    "No sé mucho sobre combates, pero te deseo suerte si sales de aquí.",
+    "Hmm... ya te conté todo lo que sé. ¡Nos vemos!"
+];
+
+let dialogo02 = [
+    "Más vale que desenfundes rápido, forastero...",
+    "Este pueblo tiene sus reglas... y yo me encargo de hacerlas cumplir.",
+    "El oro y el plomo son las únicas monedas que importan en este lugar.",
+    "Dicen que el desierto no perdona... pero yo tampoco.",
+    "Ya te dije suficiente, forastero. Que el polvo del camino te lleve lejos..."
+];
+
+let dialogo03 = [
+    "¡Por el honor! Aunque... ¿y si hay dragones cerca?",
+    "¿Qué fue ese ruido? ¡Seguramente fue solo el viento... o quizás un ogro!",
+    "No temo a las criaturas oscuras... ¡bueno, un poquito sí!",
+    "Por supuesto que soy valiente... pero mejor si tenemos una buena estrategia, ¿eh?",
+    "Lo haremos... solo, por favor, no dejéis que me toque ese monstruo. ¡Prometido?"
+];
+
+let dialogo04 = [
+    "Las sombras me obedecen... nadie puede escapar de mi poder.",
+    "Tus almas serán mías, como todas las demás que se han atrevido a cruzarme.",
+    "Con un solo gesto, puedo hacer temblar la tierra... y la oscuridad no tiene límites.",
+    "El destino ya está escrito, y no hay escapatoria para aquellos que se interponen en mi camino.",
+    "Solo los valientes desafían mi magia... pero incluso ellos caerán ante mi oscuridad."
+];
+
+let dialogo05 = [
+    "El fuego es mi aliado... y con él, nada puede detenerme.",
+    "Mi armadura arde con la furia de mil dragones, ¡ningún enemigo resistirá el calor de mi justicia!",
+    "No hay oscuridad que pueda extinguir la llama de mi voluntad. ¡Arde, mundo!",
+    "Soy el herrero de mi destino, y forjo mi camino con las llamas que arden en mi pecho.",
+    "El calor de mi fuego consume todo a su paso... y tú serás el siguiente si te atreves a desafiarme."
+];
+
 function hablar(personajeId){
     let personaje=document.getElementById(personajeId); 
 
@@ -45,141 +88,39 @@ function hablar(personajeId){
 
     let bocadillo=personaje.querySelector(".bocadillo");
 
-    let fraseAleatoria; 
-    let dialogoAleatorio=Math.floor(Math.random()*20)+1;
-
+    let fraseAleatoria="No tengo nada que decir";
+    let dialogoAleatorio; 
 
     switch (personajeId) {
         case "personaje-01":
-            switch (dialogoAleatorio) {
-                case 1:
-                    fraseAleatoria="¡Honor y gloria, mi espada está lista para la batalla!";
-                    break;
-            
-                case 2:
-                    fraseAleatoria="No temáis, ¡estoy aquí para protegeros!";
-                    break;
-            
-                case 3:
-                    fraseAleatoria="Mi juramento es defender el reino hasta el último aliento."
-                    break;
-            
-                case 4:
-                    fraseAleatoria="Solo los valientes se atreven a desafiarme en combate.";
-                    break;
-            
-                case 5:
-                    fraseAleatoria="¡Que la luz de la justicia guíe mi espada!";
-                    break;
-            
-                default:
-                    fraseAleatoria="No tengo más que decir... Que la espada me guíe. ¡Adiós!";
-                    break;
-            }
-            break; //salir del primer switch
-            
-        case "personaje-02":
-            switch (dialogoAleatorio) {
-                case 1:
-                    fraseAleatoria="Soy rápido con el revólver, pero mi mirada lo dice todo.";
-                    break;
-            
-                case 2:
-                    fraseAleatoria="Soy rápido con el revólver, pero mi mirada lo dice todo.";
-                    break;
-            
-                case 3:
-                    fraseAleatoria="La última bala que disparo siempre es la que decide el duelo.";
-                    break;
-            
-                case 4:
-                    fraseAleatoria="No busco problemas, pero no dudaré en resolverlos a balazos.";
-                    break;
-            
-                case 5:
-                    fraseAleatoria="Soy hombre de pocas palabras, pero mis disparos hablan por mí.";
-                    break;
-            
-                default:
-                    fraseAleatoria="No tengo más que decir... que el viento me lleve. ¡Adiós!";
-                    break;
-            }
+            dialogoAleatorio=Math.floor(Math.random()*dialogo02.length);
+            fraseAleatoria=dialogo02[dialogoAleatorio];
             break;
-        case "personaje-3": 
-            switch (dialogoAleatorio) {
-                case 1:
-                    fraseAleatoria
-                    break;
-                case 2:
-                    fraseAleatoria
-                    break;
-                case 3:
-                    fraseAleatoria
-                    break;
-                case 4:
-                    fraseAleatoria
-                    break;
-                case 5:
-                    fraseAleatoria
-                    break;
-            
-                default:
-                    fraseAleatoria
-                    break;
-            }
-            break; 
-        case "personaje-04": 
-            switch (dialogoAleatorio) {
-                case 1:
-                    fraseAleatoria
-                    break;
-            
-                case 2:
-                    fraseAleatoria
-                    break;
-            
-                case 3:
-                    fraseAleatoria
-                    break;
-            
-                case 4:
-                    fraseAleatoria
-                    break;
-            
-                case 5:
-                    fraseAleatoria
-                    break;
-            
-                default:
-                    fraseAleatoria
-                    break;
-            }
-            break; 
-        case "personaje-05": 
-            switch (dialogoAleatorio) {
-                case 1:
-                    fraseAleatoria
-                    break;
-                case 2:
-                    fraseAleatoria
-                    break;
-                case 3:
-                    fraseAleatoria
-                    break;
-                case 4:
-                    fraseAleatoria
-                    break;
-                case 5:
-                    fraseAleatoria
-                    break;
-            
-                default:
-                    fraseAleatoria
-                    break;
-            }
+    
+        case "personaje-02":
+            dialogoAleatorio=Math.floor(Math.random()*dialogo01.length);
+            fraseAleatoria=dialogo01[dialogoAleatorio];
+            break;
+    
+        case "personaje-03":
+            dialogoAleatorio=Math.floor(Math.random()*dialogo03.length);
+            fraseAleatoria=dialogo03[dialogoAleatorio];
+            break;
+    
+        case "personaje-04":
+            dialogoAleatorio=Math.floor(Math.random()*dialogo04.length);
+            fraseAleatoria=dialogo04[dialogoAleatorio];
+            break;
+    
+        case "personaje-05":
+            dialogoAleatorio=Math.floor(Math.random()*dialogo05.length);
+            fraseAleatoria=dialogo05[dialogoAleatorio];
+            break;
+    
         default:
             break;
     }
+
 
     bocadillo.innerHTML=fraseAleatoria; 
     bocadillo.style.display = 'block';

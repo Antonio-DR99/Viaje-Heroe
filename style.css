@@ -51,18 +51,18 @@ html, body{
 }
 
 .contenedorControl{
-    display: flex;
     justify-content: center;
-    margin-top: -4%;
-    padding: 5%;
     flex-direction: column;
     align-items: center;
-    margin-right: 70%;
+    margin-right: 80%;
+    padding: 70px;
+    display: flex;
 }
 
 
 .contenedorControl img{
-    width: 60%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -109,6 +109,7 @@ button:hover {
 .personajes img:active{
     transform: scale(1.1);
 }
+
 .bocadillo {
     display: none; /* Se oculta por defecto */
     position: absolute; /* Posición absoluta para situarlo en el lugar deseado */

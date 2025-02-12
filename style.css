@@ -95,7 +95,10 @@ button:hover {
     height: auto;    
     cursor: pointer;
 }
-
+.personajes img:active{
+    transform: scale(1.1);
+    
+}
 .bocadillo {
     display: none; /* Se oculta por defecto */
     position: absolute; /* Posición absoluta para situarlo en el lugar deseado */

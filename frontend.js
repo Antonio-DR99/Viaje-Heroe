@@ -21,8 +21,8 @@ function positionRandom(){
     let personajeWidth = personajeSeleccionado.offsetWidth;  
     let personajeHeight = personajeSeleccionado.offsetHeight; 
     
-    let randomX=Math.random()*(pantallaWidth-personajeWidth);
-    let randomY=Math.random()*(pantallaHeight-personajeHeight);
+    let randomX = Math.round(Math.random() * (pantallaWidth - personajeWidth));               // Math.round redondea hacia el entero más cercano ( "5.4 -> 5" , "5.6 -> 6" a)
+    let randomY = Math.round(Math.random() * (pantallaHeight - personajeHeight));
 
 
     personajeSeleccionado.style.position="absolute";

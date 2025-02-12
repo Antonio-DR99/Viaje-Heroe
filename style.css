@@ -77,10 +77,6 @@ html, body{
     background-position: center; 
     background-repeat: no-repeat;
 }
-
-
-
-
                                     
 button {
     position: absolute;
@@ -97,15 +93,22 @@ button:hover {
     background-color: rgb(255, 255, 252, 0.3);
 
 }
-.personajes{
+.personajes {
     display: none;
-    position:absolute;
+    position: absolute;
+    width: fit-content; /* El div se ajusta al contenido (la imagen) */
+    height: fit-content;
+    padding: 0; /* Sin relleno extra */
+    margin: 0; /* Sin margen extra */
 }
-.personajes img{
+
+.personajes img {
     width: 80px;
-    height: auto;    
+    height: auto;
     cursor: pointer;
+    display: block; /* Evita espacios extra por imágenes en línea */
 }
+
 .personajes img:active{
     transform: scale(1.1);
 }

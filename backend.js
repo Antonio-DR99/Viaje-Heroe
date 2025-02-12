@@ -4,6 +4,7 @@ var distancia = 5;
 var personajeSeleccionado = "personaje-01"; 
 var anchoPantalla = window.innerWidth;
 var altoPantalla = window.innerHeight;
+var movimientoPersonaje = false;
 
 function iniciarJuego() {
     var pantallaInicio = document.getElementById('pantallaInicio');
@@ -24,12 +25,17 @@ function iniciarJuego() {
     escucharTeclado();
 }
 
-
-// Elegir un personaje al clicarco
-
 function seleccionarPersonaje(id) {
+    movimientoPersonaje = false; 
     personajeSeleccionado = id;
+    var personaje = document.getElementById(personajeSeleccionado);
+    posX = personaje.offsetLeft;
+    posY = personaje.offsetTop;
+    movimientoPersonaje = true; 
+    document.removeEventListener("keydown", moverPersonaje);
+    document.addEventListener("keydown", moverPersonaje);
 }
+
 
 function derecha() {
     var personaje = document.getElementById(personajeSeleccionado);
@@ -63,12 +69,13 @@ function abajo() {
     }
 }
 
+function escucharTeclado() { 
+    document.removeEventListener("keydown", moverPersonaje);
+    document.addEventListener("keydown", moverPersonaje);
+}
 
-// funcion Teclado 
-
-
-function escucharTeclado() {
-    document.addEventListener("keydown", function (teclaPresionada) {
+function moverPersonaje(teclaPresionada) {
+    if (movimientoPersonaje) {
         if (teclaPresionada.key === "ArrowRight") {
             derecha();
         } else if (teclaPresionada.key === "ArrowLeft") {
@@ -78,11 +85,5 @@ function escucharTeclado() {
         } else if (teclaPresionada.key === "ArrowDown") {
             abajo();
         }
-    });
+    } 
 }
-
-
-
-
-
-

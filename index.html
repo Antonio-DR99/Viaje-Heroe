@@ -24,13 +24,14 @@
 
     <div class="contenedorJuego">
 
-        <div class="contenedorControl">
-            <input type="button" value="Generar Personajes" onclick="positionRandom()">
-            <img src="resources/barraVida.png">
-            <img src="resources/barraPociones.png">
-        </div>
-
         <div class="pantallaJuego" id="pantallaJuego">
+
+            <div class="contenedorControl">
+                <input type="button" value="Generar Personajes" onclick="positionRandom()">
+                <img src="resources/barraVida.png">
+                <img src="resources/barraPociones.png">
+            </div>
+
             <div class="personajes" id="personaje-01" onclick="seleccionarPersonaje()" style="display: none;">
                 <img src="resources/personaje-01.gif" onclick="hablar('personaje-01')">
                 <div class="bocadillo"></div>

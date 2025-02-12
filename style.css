@@ -42,10 +42,11 @@ html, body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: black;
     width: 100vw;
     height: 100vh;
-    background: url('resources/BackGraund.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     
 }
 
@@ -67,12 +68,11 @@ html, body{
     display: flex;
 }
 .pantallaJuego {     
-    border-radius: 10px;     
     position: relative; 
-    width: 100vh;       
+    width: 100vw;       
     height: 100vh;
-    background: url('resources/BackGraund.png');
     display: none;
+    background-image: url('resources/BackGraund.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;

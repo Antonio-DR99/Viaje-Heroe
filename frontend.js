@@ -30,14 +30,7 @@ function positionRandom(){
         for (let j = 0; j < posicionesOcupadas.length; j++) {
             let posicion = posicionesOcupadas[j];  
         
-            // Comprobar si hay superposición entre la nueva posición y la ocupada
-            if (Math.round(posicion.x - randomX) < personajeWidth && Math.round(posicion.y - randomY) < personajeHeight) {
-                // Si se solapan, generamos nuevas coordenadas
-                console.log("Las posiciones se solapan.");
-            } else {
-                // Si no se solapan, podemos guardar la nueva posición
-                console.log("Posición válida.");
-            }
+            
         }
 
     }

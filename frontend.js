@@ -1,5 +1,8 @@
 let contadorPersonajes=0; 
 
+let posicionesOcupadas=[]; 
+
+
 function positionRandom(){
     let personajes=document.querySelectorAll('.personajes'); 
 
@@ -7,10 +10,7 @@ function positionRandom(){
         return;
     }
     
-    //let randomIndex=Math.floor(Math.random()*personajes.length); 
     let personajeSeleccionado=personajes[contadorPersonajes];
-    //personajeSeleccionado=personajes[contadorPersonajes]; 
-
     personajeSeleccionado.style.display="block"; 
 
 
@@ -21,8 +21,26 @@ function positionRandom(){
     let personajeWidth = personajeSeleccionado.offsetWidth;  
     let personajeHeight = personajeSeleccionado.offsetHeight; 
     
-    let randomX = Math.round(Math.random() * (pantallaWidth - personajeWidth));               // Math.round redondea hacia el entero más cercano ( "5.4 -> 5" , "5.6 -> 6" a)
-    let randomY = Math.round(Math.random() * (pantallaHeight - personajeHeight));
+    let randomX, randomY;
+
+    for(let i=0; i<100; i++){
+        randomX = Math.round(Math.random() * (pantallaWidth - personajeWidth));               
+        randomY = Math.round(Math.random() * (pantallaHeight - personajeHeight));
+
+        for (let j = 0; j < posicionesOcupadas.length; j++) {
+            let posicion = posicionesOcupadas[j];  
+        
+            // Comprobar si hay superposición entre la nueva posición y la ocupada
+            if (Math.round(posicion.x - randomX) < personajeWidth && Math.round(posicion.y - randomY) < personajeHeight) {
+                // Si se solapan, generamos nuevas coordenadas
+                console.log("Las posiciones se solapan.");
+            } else {
+                // Si no se solapan, podemos guardar la nueva posición
+                console.log("Posición válida.");
+            }
+        }
+
+    }
 
 
     personajeSeleccionado.style.position="absolute";
@@ -34,6 +52,26 @@ function positionRandom(){
     console.log(`Personaje ${contadorPersonajes}: X=${randomX}, Y=${randomY}`);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

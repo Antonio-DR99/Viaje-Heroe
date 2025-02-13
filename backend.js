@@ -7,6 +7,7 @@ var anchoPantalla = window.innerWidth;
 var altoPantalla = window.innerHeight;  
 var tecladoActivo = false;  
 
+
 function iniciarJuego() {
     var pantallaInicio = document.getElementById('pantallaInicio');
     var pantallaJuego = document.getElementById('pantallaJuego');
@@ -103,7 +104,7 @@ function solapamiento(x, y) {
             var anchoOtro = otroPersonaje.offsetWidth;  
             var altoOtro = otroPersonaje.offsetHeight; 
 
-            if (x < posXPersonaje + anchoOtro + 20 && x + anchoPersonaje > posXPersonaje + 20 &&  y < posYPersonaje + altoOtro + 20 && y + altoPersonaje > posYPersonaje + 20) {
+            if (x < posXPersonaje + anchoOtro && x + anchoPersonaje > posXPersonaje && y < posYPersonaje + altoOtro && y + altoPersonaje > posYPersonaje) {
                 return true;  
             }
         }

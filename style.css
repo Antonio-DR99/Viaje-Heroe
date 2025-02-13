@@ -50,6 +50,7 @@ html, body{
     
 }
 
+
 .contenedorControl{
     justify-content: center;
     flex-direction: column;
@@ -58,8 +59,25 @@ html, body{
     padding: 70px;
     display: flex;
 }
+.contenedorControl input{
+    background-color: white; /* Fondo blanco */
+    color: black; /* Texto en negro */
+    border: 2px solid #ccc; /* Borde gris claro */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.3s;
+}
+.contenedorControl input:hover{
+    background-color: #f0f0f0; /* Fondo ligeramente gris al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+    border-color: #999; /* Cambio de borde a gris más oscuro */
+}
 
-
+.contenedorControl input:active{
+    transform: scale(0.98); /* Se hace un pequeño efecto de "presionar" */
+}
 .contenedorControl img{
     width: 140%;
     height: 180%;

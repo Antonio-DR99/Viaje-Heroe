@@ -121,7 +121,7 @@ button:hover {
 }
 
 .personajes img {
-    width: 80px;
+    width: 50px;
     height: auto;
     cursor: pointer;
     display: block; /* Evita espacios extra por imágenes en línea */

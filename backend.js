@@ -103,7 +103,7 @@ function solapamiento(x, y) {
             var anchoOtro = otroPersonaje.offsetWidth;  
             var altoOtro = otroPersonaje.offsetHeight; 
 
-            if (x < posXPersonaje + anchoOtro && x + anchoPersonaje > posXPersonaje && y < posYPersonaje + altoOtro && y + altoPersonaje > posYPersonaje) {
+            if (x < posXPersonaje + anchoOtro + 20 && x + anchoPersonaje > posXPersonaje + 20 &&  y < posYPersonaje + altoOtro + 20 && y + altoPersonaje > posYPersonaje + 20) {
                 return true;  
             }
         }

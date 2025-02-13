@@ -22,14 +22,15 @@ function positionRandom(){
     let personajeHeight = personajeSeleccionado.offsetHeight; 
     
     let randomX, randomY;
-
+    let posicionValida=false;
     for(let i=0; i<100; i++){
         randomX = Math.round(Math.random() * (pantallaWidth - personajeWidth));               
         randomY = Math.round(Math.random() * (pantallaHeight - personajeHeight));
 
         for (let j = 0; j < posicionesOcupadas.length; j++) {
             let posicion = posicionesOcupadas[j];  
-        
+            
+
             
         }
 
@@ -89,19 +90,14 @@ let dialogos= [
     "Tus almas serán mías, como todas las demás que se han atrevido a cruzarme.",
     "Con un solo gesto, puedo hacer temblar la tierra... y la oscuridad no tiene límites.",
     "El destino ya está escrito, y no hay escapatoria para aquellos que se interponen en mi camino.",
-    "Solo los valientes desafían mi magia... pero incluso ellos caerán ante mi oscuridad.",
-    "El fuego es mi aliado... y con él, nada puede detenerme.",
-    "Mi armadura arde con la furia de mil dragones, ¡ningún enemigo resistirá el calor de mi justicia!",
-    "No hay oscuridad que pueda extinguir la llama de mi voluntad. ¡Arde, mundo!",
-    "Soy el herrero de mi destino, y forjo mi camino con las llamas que arden en mi pecho.",
-    "El calor de mi fuego consume todo a su paso... y tú serás el siguiente si te atreves a desafiarme.",
-    "Hmm... ya te conté todo lo que sé. ¡Nos vemos!"
 ];
 
 
-let limiteConversacion = 5; // Límite de frases antes de que deje de hablar
+let limiteConversacion = 20; 
 let contadorConversacion = 0;
 let ultimoPersonaje;
+
+let dialogosRestantes=[...dialogos];
 
 function hablar(personajeId) {
     let personaje = document.getElementById(personajeId);
@@ -116,17 +112,24 @@ function hablar(personajeId) {
     if (ultimoPersonaje!==personajeId) {
         contadorConversacion=0; 
         ultimoPersonaje=personajeId;
+        dialogosRestantes=[...dialogos];
         
     }
 
 
     // Si ya se alcanzó el límite, el personaje deja de hablar
-    if (contadorConversacion >= limiteConversacion) {
+    if (dialogosRestantes.length===0) {
         fraseAleatoria = "Ya no puedo decir más... ¡Corred, insensatos!";
+        console.log("No hay mas frases");
     }else {
         // Selecciona una frase aleatoria si aún no se ha alcanzado el límite
-        let dialogoAleatorio = Math.floor(Math.random() * dialogos.length);
-        fraseAleatoria = dialogos[dialogoAleatorio];
+        let dialogoAleatorio = Math.floor(Math.random() * dialogosRestantes.length);
+        fraseAleatoria = dialogosRestantes[dialogoAleatorio];
+
+
+        console.log(`Frase seleccionada: "${fraseAleatoria}"`);
+        dialogosRestantes.splice(dialogoAleatorio,1);
+
         contadorConversacion++;
     }
 
@@ -139,7 +142,7 @@ function hablar(personajeId) {
     setTimeout(function() {
         bocadillo.style.display = 'none';
         bocadillo.classList.remove("visible");
-    }, 4000);
+    }, 5000);
 }
 
 let musicaReproducida = false;  // Corregido el nombre de la variable
